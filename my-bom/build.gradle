@@ -1,0 +1,14 @@
+apply plugin: 'java-platform'
+
+dependencies{
+    constraints{
+        api 'org.apache.commons:commons-lang3:3.3.2'
+    }
+}
+publishing {
+    publications {
+        myPlatform(MavenPublication) {
+            from components.javaPlatform
+        }
+    }
+}

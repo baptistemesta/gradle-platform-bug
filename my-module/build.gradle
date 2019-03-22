@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+}
+
+
+dependencies {
+    api platform(project(":my-bom"))
+    api 'org.apache.commons:commons-lang3'
+
+}
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from project.components.java
+        }
+    }
+}
